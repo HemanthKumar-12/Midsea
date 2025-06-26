@@ -213,22 +213,32 @@ body {
 
 /* Overview Heading Button */
 .overview-title {
-  text-align: left;
+  text-align: center;
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 40px; /* optional spacing below title */
 }
 
-.overview-button {
-  background-color: transparent;
-  color: #db9700;
-  font-size: 20px;
+.overview-title h2 {
+  display: inline-block;
+  position: relative;
+  font-size: 36px;
   font-weight: bold;
-  padding: 12px 30px;
-  border: 3px solid #db9700;
-  border-radius: 50px;
-  cursor: default;
-  margin-bottom: 40px;
+  color: #000; /* or your desired heading color */
 }
+
+.overview-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; /* distance of line from text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* length of the underline */
+  height: 3px; /* thickness of the line */
+  background-color: #0072ce; /* blue color */
+  border-radius: 2px;
+}
+
 
 .overview-section {
   padding: 80px 20px;
@@ -248,51 +258,38 @@ body {
   color: #0094d8;
 }
 
-.overview-cards {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
-.overview-card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 30px 25px;
-  width: 300px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  transition: transform 0.3s ease;
-}
-
-.overview-card:hover {
-  transform: translateY(-10px);
-}
-
-.overview-card h3 {
-  color: #111;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.overview-card p {
-  color: #555;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.overview-icon {
-  width: 50px;
-  height: 50px;
-}
 
 .featured-section {
   padding: 60px 40px;
   background: #fff;
+}
+
+.Properties-title {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 40px; /* optional spacing below title */
+}
+
+.Properties-title h2 {
+  display: inline-block;
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000; /* or your desired heading color */
+}
+
+.Properties-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; /* distance of line from text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* length of the underline */
+  height: 3px; /* thickness of the line */
+  background-color: #0072ce; /* blue color */
+  border-radius: 2px;
 }
 
 .section-title {
