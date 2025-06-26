@@ -31,15 +31,15 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'h.hemanth.fabee@gmail.com';//add mail form whom the mail send from
+    $mail->Username = 'h.hemanth.fabee@gmail.com';
     $mail->Password = 'tdat oijs qiyu mbsk'; // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
     $mail->setFrom('h.hemanth.fabee@gmail.com', 'Enquiry Alert');
-    $mail->addAddress('h.hemanth.fabee@gmail.com'); // Change to actual receiver
+    $mail->addAddress('21102057@rmd.ac.in'); // Change to actual receiver
 
-    $mail->Subject = 'New Enquiry Submitted';
+    $mail->Subject = 'New Enquiry From Medsea Housing and properties';
     $mail->Body    = "Name: $name\nEmail: $email\nMobile: $mobile";
 
     $mail->send();
