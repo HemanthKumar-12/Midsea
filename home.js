@@ -41,3 +41,25 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+// ENQUIRY POPUP SCRIPT
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('enquiryPopup');
+  const closePopup = document.getElementById('closePopup');
+  const enquireBtns = document.querySelectorAll('.enquire-btn');
+
+  enquireBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
+  });
+
+  closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
