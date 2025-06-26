@@ -63,3 +63,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch("enquiry.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => response.text())
+    .then(data => {
+      if (data.trim() === "success") {
+        document.getElementById("successMessage").style.display = "block"; // ✅ show the success message
+        this.reset(); // Optional: clear the form
+        setTimeout(() => {
+          document.getElementById("enquiryPopup").style.display = "none";
+          document.getElementById("successMessage").style.display = "none";
+        }, 3000); // Close popup after 3 seconds
+      } else {
+        alert("Something went wrong: " + data);
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error);
+    });
+});
+
