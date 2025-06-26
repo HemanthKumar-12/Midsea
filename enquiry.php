@@ -31,7 +31,7 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'h.hemanth.fabee@gmail.com';
+    $mail->Username = 'h.hemanth.fabee@gmail.com';//add mail form whom the mail send from
     $mail->Password = 'tdat oijs qiyu mbsk'; // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
